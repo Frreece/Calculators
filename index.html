@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Grade Calculator!</h1>
+
+      <ul>
+          <li> <a href="#About"> About </a> </li>
+          <li> <a href="#"> Other </a> </li>
+      </ul>
+    </div>
+    
+    <div class="input-container">
+        <div class="input-section">
+          <label for="Prep-Quiz-Percent"> Prep Quiz Percent </label>
+          <input type="number" class="weight" placeholder="Enter percentage of Prep Quiz weight">
+          <label for="Prep-Quiz-Grade">Prep Quiz Grade</label>
+          <input type="number" class="grade" placeholder="Enter your overall Prep Quiz Grade">
+          <br>
+        </div>
+      <div class="input-section">
+        <label for="Friday-Quiz-Weight"> Friday Quiz Weight </label>
+        <input type="number" class="weight" placeholder="Enter the weight of Friday Quizzes">
+        <label for="Friday-Quiz-Grade"> Friday Quiz Grade</label>
+        <input type="number" class="grade" placeholder="Enter your overall Friday Quiz Grade">
+        <br>
+      </div>
+      <button id="Add-Button" class="G_buttons"> Add </button>
+      <br>
+      <label for="Target-Grade"> Target Grade </label>
+      <input type="number" id="Target-Grade" placeholder="Enter the Grade you want">
+      <br>
+      <button id="calculate" class="G_buttons">Calculate Needed Final Grade</button>
+      <br>
+      <label for="Final-Grade">Final Grade</label>
+      <input type="text" id="Final-Grade" readonly>
+      <label for="Min-Grade"> Minimum Grade</label>
+      <input type="text" id="Min-Grade" readonly>
+      <label for="Max-Grade"> Maximum Grade</label>
+      <input type="text" id="Max-Grade" readonly>
+    </div>
+
+    <div class="About" id="About">
+        <h1> About Grade Calculator </h1>
+        
+        <div class="Container">
+          <div class="About-Cards">
+              <div class="Cards">
+                  <div class="back-div">
+                      <p> Enter the how much of the total grade this section is worth. For instance, the final may be worth 40% of 
+                          your grade, so enter 40 into the weight section. Then enter your grade in that section of the class.
+                      </p>
+                  </div>
+                  
+                  <div class="front-div">
+                      <label for="Example-Weight"> Example Weight </label> 
+                      <input type="number" class="weight-example" placeholder="Enter percentage of Prep Quiz weight" readonly> 
+                      <br>
+                      <label for="Example-Grade"> Example Grade </label> 
+                      <input type="number" class="grade-example" placeholder="Enter your overall Prep Quiz Grade" readonly>
+                  </div> 
+              </div>
+          </div>
+        </div>
+    </div>
+
+  <!-- Normal Calculator -->
+  <div class="calculator_section">
+    <h1>Normal Calculator</h1>
+    <div class="calculator_container">
+      <div class="calculator">
+        <input type="text" id="display">
+        <button class="btn operation" onclick="clearDisplay()">C</button>
+        <button class="btn operation" onclick="addToDisplay('-')">-</button>
+        <button class="btn operation" onclick="addToDisplay('+')">+</button>
+        <button class="btn operation" onclick="backspace()">backspace</button>
+        <button class="btn" onclick="addToDisplay('9')">9</button>
+        <button class="btn" onclick="addToDisplay('8')">8</button>
+        <button class="btn" onclick="addToDisplay('7')">7</button>
+        <button class="btn operation" onclick="addToDisplay('*')">×</button>
+        <button class="btn" onclick="addToDisplay('6')">6</button>
+        <button class="btn" onclick="addToDisplay('5')">5</button>
+        <button class="btn" onclick="addToDisplay('4')">4</button>
+        <button class="btn operation" onclick="addToDisplay('/')">÷</button>
+        <button class="btn" onclick="addToDisplay('3')">3</button>
+        <button class="btn" onclick="addToDisplay('2')">2</button>
+        <button class="btn" onclick="addToDisplay('1')">1</button>
+        <button class="btn operation" onclick="addToDisplay('.')">.</button>
+        <button class="btn" onclick="addToDisplay('0')" id="zero">0</button>
+        <button class="btn operation" onclick="calculate()" id="equals">=</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+  </body>
+</html>
